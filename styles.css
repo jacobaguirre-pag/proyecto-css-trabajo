@@ -1,0 +1,148 @@
+/* Estilos globales para el cuerpo de la página */
+body 
+{
+    display: flex;  /* Utiliza un modelo de caja flexible (Flexbox) */
+    flex-direction: column;  /* Organiza los elementos de arriba hacia abajo */
+    font-family: Arial, sans-serif;  /* Define la fuente de texto */
+    margin: 0;  /* Elimina el margen por defecto */
+    min-height: 100vh;  /* Asegura que el cuerpo ocupe al menos la altura completa de la ventana */
+    padding: 0;  /* Elimina el padding por defecto */
+    text-align: center;  /* Centra el texto */
+    
+    background: rgb(32,42,34);
+background: -moz-linear-gradient(90deg, rgba(32,42,34,1) 0%, rgba(65,173,166,1) 52%, rgba(43,45,43,1) 100%);
+background: -webkit-linear-gradient(90deg, rgba(32,42,34,1) 0%, rgba(65,173,166,1) 52%, rgba(43,45,43,1) 100%);
+background: linear-gradient(90deg, rgba(32,42,34,1) 0%, rgba(65,173,166,1) 52%, rgba(43,45,43,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#202a22",endColorstr="#2b2d2b",GradientType=1);;/* Establece el color de fondo */
+}
+
+/* Estilo común para encabezados (header) y pie de página (footer) */
+header, footer 
+{
+    background-color: #333;  /* Color de fondo oscuro */
+    color: #fff;  /* Color de texto blanco */
+    padding: 10px 0;  /* Espaciado interno vertical */
+}
+
+/* Estilo para el área principal (main) */
+main 
+{
+    flex: 1;  /* Permite que el área principal ocupe el espacio restante */
+    padding: 20px;  /* Añade un poco de relleno alrededor del contenido */
+}
+
+/* Asegura que el pie de página se quede en la parte inferior */
+footer 
+{
+    margin-top: auto;  /* Empuja el pie de página hacia el fondo */
+}
+
+/* Estilos para las secciones .contenedor */
+.contenedor 
+{
+    display: none;  /* Oculta las secciones por defecto */
+    margin: 0 auto;  /* Centra las secciones horizontalmente */
+    max-width: 600px;  /* Define el ancho máximo de las secciones */
+}
+
+/* Muestra las secciones cuando tienen la clase .visible */
+.contenedor.visible 
+{
+    display: block;  /* Hace que la sección se muestre */
+}
+
+/* Estilo para los encabezados h1 y h2 */
+h1, h2 
+{
+    margin-bottom: 20px;  /* Añade espacio debajo de los encabezados */
+}
+
+/* Estilos para los botones */
+button
+ {
+    background-color: #0066cc;  /* Color de fondo azul */
+    border: none;  /* Elimina el borde del botón */
+    color: white;  /* Color del texto del botón */
+    cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+    margin: 10px;  /* Añade un margen alrededor del botón */
+    padding: 15px 30px;  /* Relleno del botón (más grande para mejor accesibilidad) */
+    border-radius: 30px;  /* Bordes redondeados */
+    font-size: 16px;  /* Tamaño de fuente adecuado */
+    transition: all 0.3s ease;  /* Transición suave para cambios en el estilo */
+}
+
+/* Efecto de hover (cuando el cursor pasa por encima del botón) */
+button:hover
+ {
+    background-color: #00509e;  /* Cambia el color de fondo cuando pasa el cursor */
+    transform: translateY(-4px);  /* Eleva ligeramente el botón */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);  /* Añade sombra al botón */
+}
+
+/* Efecto de presionado (cuando el botón es presionado) */
+button:active 
+{
+    transform: translateY(2px);  /* Hace que el botón se "hunda" cuando se presiona */
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);  /* Reduce la sombra cuando se presiona */
+}
+
+/* Estilo cuando el botón recibe foco (cuando es seleccionado) */
+button:focus
+ {
+    outline: none;  /* Elimina el borde de enfoque predeterminado */
+    box-shadow: 0 0 0 4px rgba(0, 102, 204, 0.6);  /* Resalta el botón con una sombra azul */
+}
+
+/* Estilos para los formularios */
+form
+ {
+    display: flex;  /* Utiliza Flexbox para organizar los elementos */
+    flex-direction: column;  /* Organiza los elementos en una columna */
+    gap: 10px;  /* Añade un espacio entre los elementos del formulario */
+    text-align: left;  /* Alinea el texto a la izquierda */
+}
+
+/* Estilos para las tablas */
+table 
+{
+    border-collapse: collapse;  /* Elimina los bordes duplicados de las celdas */
+    margin: 20px auto;  /* Centra la tabla y añade un margen vertical */
+    width: 100%;  /* La tabla ocupa todo el ancho disponible */
+}
+
+/* Estilo para las celdas de las tablas (th, td) */
+th, td 
+{
+    border: 1px solid #ddd;  /* Añade un borde delgado y gris alrededor de las celdas */
+    padding: 8px;  /* Añade relleno dentro de las celdas */
+}
+
+/* Estilo para las celdas de encabezado */
+th 
+{
+    background-color: #f2f2f2;  /* Color de fondo gris claro para los encabezados */
+}
+
+/* Estilos para listas ordenadas (ol) y no ordenadas (ul) */
+ul, ol 
+{
+    margin: 0 auto;  /* Centra las listas */
+    max-width: 300px;  /* Define un ancho máximo para las listas */
+    text-align: left;  /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para el pie de página (footer) */
+footer p 
+{
+    font-size: 14px;  /* Reduce el tamaño de fuente en el pie de página */
+}
+
+/* Estilo para las imágenes dentro de la tabla */
+table img 
+{
+    width: 80%;  /* Ajusta el ancho de la imagen al 80% del contenedor */
+    height: auto;  /* Mantiene las proporciones originales de la imagen */
+    max-width: 400px;  /* Limita el ancho máximo de la imagen a 400px */
+    display: block;  /* Hace que la imagen se comporte como un bloque */
+    margin: 0 auto;  /* Centra la imagen dentro de su celda */
+}

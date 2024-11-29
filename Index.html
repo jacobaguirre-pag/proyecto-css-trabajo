@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prueba css</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Rambo <img src="m.svg">   </h1> <!-- Título de la página principal -->
+
+    </header>
+    <main>
+        <section id="inicio" class="contenedor visible"> <!-- Sección principal de inicio visible por defecto -->
+            <!-- Botones que permiten navegar entre las diferentes secciones -->
+            <button onclick="mostrarSeccion('sesion1')">Sesión 1</button> <!-- genera acceso a cada seccion por pagina con el boton -->
+            <button onclick="mostrarSeccion('sesion2')">Sesión 2</button>
+            <button onclick="mostrarSeccion('sesion3')">Sesión 3</button>
+            <button onclick="mostrarSeccion('sesion4')">Sesión 4</button>
+        </section>
+        <table style="margin: 20px auto;">
+        <tr>
+            <td>
+                <!-- Imagen redimensionada dentro de la tabla -->
+                <img src="rambo.png" alt="Imagen de Rambo" style="width: 80%; height: auto; max-width: 400px;">
+            </td>
+        </tr>
+        </table>
+
+        <!-- Sesión 1 que muestra una lista ordenada -->
+        <section id="sesion1" class="contenedor">
+            <h2>Sesión 1: Lista Ordenada</h2>
+            <ol>
+                <li>Good of war </li> <!-- li  Crea una caja es decir por cada li creo el texto pa entender como si fuera la p -->
+                <li>Left 4 dead 2</li>
+                <li>Hora de aventura</li>
+            </ol>
+            <!-- Botón para regresar a la sección de inicio -->
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+
+        <!-- Sección Sesión 2 que muestra una lista desordenada -->
+        <section id="sesion2" class="contenedor">
+            <h2>Sesión 2: Lista Desordenada</h2>
+            <ul>
+                <li>Pollo</li> <!-- li  Crea una caja es decir por cada li creo el texto pa entender como si fuera la p -->
+                <li>Perro</li>
+                <li>Elefante</li>
+            </ul>
+            <!-- Botón para regresar a la sección de inicio -->
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+
+        <!-- Sección Sesión 3 que muestra una tabla -->
+         <section id="sesion3" class="contenedor">
+    <!-- Título de la sección "Sesión 3: Tabla" -->
+    <h2>Sesión 3: Tabla</h2>
+
+    <!-- Tabla que contiene una lista de personas con nombre, apellido y edad -->
+    <table> <!--sirve para insertar la tabla -->
+        <thead>
+            <!-- Encabezado de la tabla con los títulos de las columnas -->
+            <tr><!--  <tr> define una fila de celdas en una tabla. -->
+                <th>Nombre</th>  <!-- Columna para el nombre -->
+                <th>Apellido</th> <!-- Columna para el apellido -->
+                <th>Edad</th>    <!-- Columna para la edad -->
+            </tr><!--  <tr> define una fila de celdas en una tabla. -->
+        </thead>
+        <tbody> <!-- el tbody es como lo que va de contenido en la tabla osea lo que no es subrayado -->
+            <!-- Cuerpo de la tabla que contiene las filas con los datos -->
+            <tr><!--  <tr> define una fila de celdas en una tabla. -->
+                <td>JACOB</td>   <!-- Celda para el nombre de la primera persona -->
+                <td>CORTES</td>  <!-- Celda para el apellido de la primera persona -->
+                <td>21</td>      <!-- Celda para la edad de la primera persona -->
+            </tr>
+            <tr> <!--  <tr> define una fila de celdas en una tabla. -->
+                <td>KATY</td>    <!-- Celda para el nombre de la segunda persona -->
+                <td>KORSIO</td>  <!-- Celda para el apellido de la segunda persona -->
+                <td>29</td>      <!-- Celda para la edad de la segunda persona -->
+            </tr>
+
+            <tr> <!--  <tr> define una fila de celdas en una tabla. -->
+                <td>LAURA</td>    <!-- Celda para el nombre de la segunda persona -->
+                <td>YURIANA</td>  <!-- Celda para el apellido de la segunda persona -->
+                <td>22</td>      <!-- Celda para la edad de la segunda persona -->
+            </tr>
+
+            <tr> <!--  <tr> define una fila de celdas en una tabla. -->
+                <td>YURIANA</td>    <!-- Celda para el nombre de la segunda persona -->
+                <td>CABELLO</td>  <!-- Celda para el apellido de la segunda persona -->
+                <td>21</td>      <!-- Celda para la edad de la segunda persona -->
+            </tr>
+        </tbody>
+
+    </table>
+
+
+            <!-- Botón para regresar a la sección de inicio -->
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+
+        <!-- Sección Sesión 4 que contiene un formulario -->
+        <section id="sesion4" class="contenedor">
+    <!-- Título de la sección, que indica que esta parte es un formulario -->
+    <h2>Sesión 4: Formulario</h2>
+
+    <!-- El formulario contiene varios campos para que el usuario ingrese información -->
+    <form>
+        <!-- Campo de texto para ingresar el nombre del usuario -->
+        <label for="nombre">Nombre:</label> <!-- Etiqueta para describir el campo -->
+        <input id="nombre" name="nombre" type="text" required> <!-- Campo de texto donde el usuario escribe su nombre. 'required' significa que es obligatorio completarlo -->
+
+        <!-- Campo de texto para ingresar el correo electrónico del usuario -->
+        <label for="email">Correo Electrónico:</label> <!-- Etiqueta para describir el campo -->
+        <input id="email" name="email" type="email" required> <!-- Campo de texto donde el usuario escribe su correo electrónico. 'required' significa que es obligatorio completarlo -->
+
+        <!-- Sección de botones de selección para elegir el género -->
+        <fieldset> <!-- Elemento que agrupa los botones de opción relacionados (en este caso, los géneros) -->
+            <legend>Género:</legend> <!-- Título de la sección de selección de género -->
+            <!-- Botones de radio para seleccionar el género. El usuario solo puede elegir uno -->
+            <label><input name="genero" type="radio" value="masculino"> Masculino</label> <!-- Opción para elegir "Masculino" -->
+            <label><input name="genero" type="radio" value="femenino"> Femenino</label> <!-- Opción para elegir "Femenino" -->
+        </fieldset>
+
+        <!-- Campo de selección (desplegable) para elegir el país del usuario -->
+        <label for="pais">País:</label> <!-- Etiqueta para describir el campo de selección -->
+        <select id="pais" name="pais"> <!-- Campo de selección que permite elegir un país -->
+            <option value="mx">Colombia</option> <!-- Opción para elegir Colombia -->
+            <option value="us">Estados Unidos</option> <!-- Opción para elegir Estados Unidos -->
+            <option value="es">España</option> <!-- Opción para elegir España -->
+            <option value="ec">Ecuador</option> <!-- Opción para elegir Ecuador -->
+        </select>
+
+        <!-- Botón de envío para enviar el formulario -->
+        <button type="submit">Enviar</button> <!-- Al hacer clic, el formulario se enviará -->
+
+    </form>
+
+    <!-- Botón que permite regresar a la sección de inicio -->
+    <button onclick="mostrarSeccion('inicio')">Volver</button> <!-- Al hacer clic, se llama a la función 'mostrarSeccion' para regresar a la sección de inicio -->
+</section>
+
+    </main>
+    <footer>
+        <!-- Pie de página con el copyright -->
+        <p>&copy; 2024 JACOB CORTES</p>
+    </footer>
+
+    <script>
+        // Función que maneja la visualización de las secciones
+        function mostrarSeccion(seccionId) {
+            // Ocultar todas las secciones
+            document.querySelectorAll('.contenedor').forEach((seccion) => {
+                seccion.classList.remove('visible');
+            });
+            // Mostrar la sección seleccionada
+            document.getElementById(seccionId).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
