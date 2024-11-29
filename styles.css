@@ -9,12 +9,12 @@ body
     padding: 0;  /* Elimina el padding por defecto */
     text-align: center;  /* Centra el texto */
     
-    background: rgb(32,42,34);
-background: -moz-linear-gradient(90deg, rgba(32,42,34,1) 0%, rgba(65,173,166,1) 52%, rgba(43,45,43,1) 100%);
-background: -webkit-linear-gradient(90deg, rgba(32,42,34,1) 0%, rgba(65,173,166,1) 52%, rgba(43,45,43,1) 100%);
-background: linear-gradient(90deg, rgba(32,42,34,1) 0%, rgba(65,173,166,1) 52%, rgba(43,45,43,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#202a22",endColorstr="#2b2d2b",GradientType=1);;/* Establece el color de fondo */
-}
+    background-image: url('fondo.jpge');
+            background-size: cover; /* Ajusta la imagen para cubrir toda la página */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            margin: 0; /* Elimina márgenes predeterminados */
+            height: 100vh; /* Asegura que la imagen cubra toda la altura de la ventana */
 
 /* Estilo común para encabezados (header) y pie de página (footer) */
 header, footer 
@@ -145,4 +145,31 @@ table img
     max-width: 400px;  /* Limita el ancho máximo de la imagen a 400px */
     display: block;  /* Hace que la imagen se comporte como un bloque */
     margin: 0 auto;  /* Centra la imagen dentro de su celda */
+}
+
+/* Define el color de texto blanco para todo el cuerpo */
+body {
+    color: white;
+    background-color: #000; /* Si quieres un fondo oscuro para que se vea mejor el texto blanco */
+}
+
+/* Si quieres asegurar que los encabezados (h1, h2, etc.) también sean blancos */
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+/* Asegúrate de que el texto dentro de las tablas también sea blanco */
+table, th, td {
+    color: white;
+}
+
+/* Para botones, asegurando que el texto sea blanco */
+button {
+    color: white;
+    background-color: #333; /* Un color de fondo oscuro para los botones */
+}
+
+/* Asegurarte de que los enlaces también tengan texto blanco si hay alguno */
+a {
+    color: white;
 }
